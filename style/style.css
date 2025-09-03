@@ -9,7 +9,7 @@ body {
 
 .container {
   height: 100vh;
-  width: 100vh;
+  width: 120vh;
   margin: 0 auto;
   text-align: center;
   visibility: hidden;
@@ -211,9 +211,12 @@ body {
 }
 
 .wish-hbd {
-  font-size: 3em;
+  font-size: 2em;
   margin: 0;
+  z-index: 99;
   text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .wish h5 {
@@ -285,7 +288,7 @@ body {
   }
 
   .wish-hbd {
-    font-size: 2.2em;
+    font-size: 2em;
   }
 
   .wish h5 {

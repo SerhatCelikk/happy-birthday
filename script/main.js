@@ -10,6 +10,8 @@ const fetchData = () => {
             document
               .querySelector(`[data-node-name*="${customData}"]`)
               .setAttribute("src", data[customData]);
+          } else if (customData === "wishHeading") {
+            document.querySelector(`[data-node-name*="${customData}"]`).innerText = data[customData];
           } else {
             document.querySelector(`[data-node-name*="${customData}"]`).innerText = data[customData];
           }
@@ -36,7 +38,7 @@ const animationTimeline = () => {
 
   hbd.innerHTML = `<span>${hbd.innerHTML
     .split("")
-    .join("</span><span>")}</span`;
+    .join("</span> <span>")}</span`;
 
   const ideaTextTrans = {
     opacity: 0,
@@ -249,7 +251,7 @@ const animationTimeline = () => {
       {
         scale: 1,
         rotationY: 0,
-        color: "#ff69b4",
+        color: "#f73333ff",
         ease: Expo.easeOut
       },
       0.1,
