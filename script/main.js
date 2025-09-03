@@ -11,7 +11,9 @@ const fetchData = () => {
               .querySelector(`[data-node-name*="${customData}"]`)
               .setAttribute("src", data[customData]);
           } else if (customData === "wishHeading") {
-            document.querySelector(`[data-node-name*="${customData}"]`).innerText = data[customData];
+            document.querySelector(`[data-node-name*="wishHeading1"]`).innerText = "Doğum Günün";
+            document.querySelector(`[data-node-name*="wishHeading2"]`).innerText = "Kutlu Olsun";
+
           } else {
             document.querySelector(`[data-node-name*="${customData}"]`).innerText = data[customData];
           }
@@ -31,12 +33,16 @@ const animationTimeline = () => {
   // Spit chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
   const hbd = document.getElementsByClassName("wish-hbd")[0];
+  const hbd2 = document.getElementsByClassName("wish-hbd")[1];
 
   textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
     .split("")
     .join("</span><span>")}</span`;
 
   hbd.innerHTML = `<span>${hbd.innerHTML
+    .split("")
+    .join("</span> <span>")}</span`;
+  hbd2.innerHTML = `<span>${hbd2.innerHTML
     .split("")
     .join("</span> <span>")}</span`;
 
@@ -234,7 +240,7 @@ const animationTimeline = () => {
       {
         opacity: 0,
         y: -50,
-        // scale: 0.3,
+        scale: 0.3,
         rotation: 150,
         skewX: "30deg",
         ease: Elastic.easeOut.config(1, 0.5)

@@ -211,7 +211,8 @@ body {
 }
 
 .wish-hbd {
-  font-size: 2em;
+  font-size: auto;
+  width: 100%;
   margin: 0;
   z-index: 99;
   text-transform: uppercase;
@@ -288,7 +289,8 @@ body {
   }
 
   .wish-hbd {
-    font-size: 2em;
+    font-size: auto;
+    width: 100%;
   }
 
   .wish h5 {
